@@ -8,6 +8,10 @@ export interface Product {
   image: string;
   description: string;
   features: string[];
+  contactInfo?: {
+    email: string;
+    wa: string;
+  };
 }
 
 export const PRODUCTS: Product[] = [
@@ -58,5 +62,25 @@ export const PRODUCTS: Product[] = [
       "Warna Hitam Vintage Aesthetic",
       "Bonus Pin / Metal Bracket Pasang",
     ],
+  },
+  {
+    id: "jasa-pembuatan-web-app",
+    title: "Jasa Pembuatan Website & Aplikasi Custom",
+    price: 0,
+    formattedPrice: "Custom Quote",
+    category: "Digital Service",
+    badge: "Jasa IT",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+    description: "Layanan profesional pembuatan landing page, web e-commerce, sistem enterprise, hingga aplikasi Android/iOS custom sesuai kebutuhan bisnis Anda.",
+    features: [
+      "Fullstack Web & Mobile App Development",
+      "Performa Tinggi, Fast Loading & Modern UI/UX",
+      "Integrasi Backend, API & Cloud Server (Proxmox/Cloudflare)",
+      "Konsultasi & Support Garansi Maintenance",
+    ],
+    contactInfo: {
+      email: "adhitya.akbar@gmail.com",
+      wa: "628118135416",
+    },
   },
 ];
