@@ -8,6 +8,7 @@ export interface Product {
   image: string;
   description: string;
   features: string[];
+  tokopediaUrl?: string;
   contactInfo?: {
     email: string;
     wa: string;
@@ -23,6 +24,7 @@ export const PRODUCTS: Product[] = [
     category: "Aksesoris Handphone",
     badge: "Terlaris",
     image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=800&auto=format&fit=crop",
+    tokopediaUrl: "https://www.tokopedia.com/ginkobiloba",
     description: "Casing pelindung premium Xiaomi 13T dilengkapi slider penutup kamera presisi tinggi serta ring stand magnetik multifungsi.",
     features: [
       "Sliding Camera Cover (Melindungi lensa dari goresan)",
@@ -38,7 +40,8 @@ export const PRODUCTS: Product[] = [
     formattedPrice: "Rp 150.000",
     category: "Hobi & Koleksi",
     badge: "Eksklusif",
-    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop",
+    tokopediaUrl: "https://www.tokopedia.com/ginkobiloba",
     description: "Bendera koleksi premium serial Game of Thrones motif House Stark 'Winter Is Coming'. Ukuran standar dinding 90x150cm.",
     features: [
       "Bahan Polyester Premium Tebal",
@@ -55,6 +58,7 @@ export const PRODUCTS: Product[] = [
     category: "Hobi & Koleksi",
     badge: "Eksklusif",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop",
+    tokopediaUrl: "https://www.tokopedia.com/ginkobiloba",
     description: "Bendera dekorasi Game of Thrones motif lambang Direwolf bundar vintage. Cocok untuk kamar, cafe, studio, atau event.",
     features: [
       "Serat Polyester High Quality",

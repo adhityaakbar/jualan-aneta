@@ -47,6 +47,15 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <span className="hidden sm:inline text-white/70">Official Store & Digital Services</span>
             <a
+              href="https://www.tokopedia.com/ginkobiloba"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#2997FF] hover:text-white text-[12px] font-normal transition-colors flex items-center gap-1"
+            >
+              <span>Tokopedia Store</span>
+              <ShoppingBag className="w-3.5 h-3.5" />
+            </a>
+            <a
               href="https://wa.me/628118135416"
               target="_blank"
               rel="noopener noreferrer"
@@ -183,7 +192,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="px-8 pb-8 pt-4 border-t border-[#E5E7EB] flex items-center justify-between">
+              <div className="px-8 pb-8 pt-4 border-t border-[#E5E7EB] flex items-center justify-between gap-4">
                 <div>
                   <span className="block text-[12px] text-[#86868B] font-normal">
                     {product.contactInfo ? "Starting Price" : "Price"}
@@ -193,13 +202,27 @@ export default function Home() {
                   </span>
                 </div>
 
-                <button
-                  onClick={() => handleOrder(product)}
-                  className="bg-[#0071E3] hover:bg-[#0066CC] text-white px-[21px] py-[11px] rounded-full text-[15px] font-normal transition-colors h-[44px] inline-flex items-center justify-center gap-1.5"
-                >
-                  <span>{product.contactInfo ? "Contact Dev" : "Buy Now"}</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+                <div className="flex items-center gap-2">
+                  {product.tokopediaUrl && (
+                    <a
+                      href={product.tokopediaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-[#E5E7EB] hover:bg-[#F5F5F7] text-[#1D1D1F] px-[16px] py-[11px] rounded-full text-[14px] font-normal transition-colors h-[44px] inline-flex items-center justify-center gap-1.5"
+                    >
+                      <ShoppingBag className="w-4 h-4 text-[#0071E3]" />
+                      <span>Tokopedia</span>
+                    </a>
+                  )}
+
+                  <button
+                    onClick={() => handleOrder(product)}
+                    className="bg-[#0071E3] hover:bg-[#0066CC] text-white px-[21px] py-[11px] rounded-full text-[15px] font-normal transition-colors h-[44px] inline-flex items-center justify-center gap-1.5"
+                  >
+                    <span>{product.contactInfo ? "Contact Dev" : "Order via WA"}</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
