@@ -1,0 +1,36 @@
+name: Deploy to LXC g4-apps
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to LXC g4-apps via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.LXC_HOST }}
+          username: ${{ secrets.LXC_USER }}
+          password: ${{ secrets.LXC_PASSWORD }}
+          script: |
+            cd /var/www/jualan-aneta
+            git pull origin main
+            npm ci
+            npm run build
+            pm2 restart jualan-aneta
