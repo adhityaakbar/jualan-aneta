@@ -17,7 +17,7 @@ export default function Home() {
       const text = encodeURIComponent(
         `Halo! Saya berminat membeli produk *${product.title}* seharga *${product.formattedPrice}* di web jualan.aneta.my.id. Mohon informasi cara pemesanannya.`
       );
-      window.open(`https://wa.me/6281331438346?text=${text}`, "_blank");
+      window.open(`https://wa.me/628118135416?text=${text}`, "_blank");
     }
   };
 
