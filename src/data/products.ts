@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     formattedPrice: "Rp 90.000",
     category: "Aksesoris Handphone",
     badge: "Terlaris",
-    image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?q=80&w=800&auto=format&fit=crop",
+    image: "/uploads/softcase-xiaomi-13t.png",
     tokopediaUrl: "https://www.tokopedia.com/ginkobiloba",
     description: "Casing pelindung premium Xiaomi 13T dilengkapi slider penutup kamera presisi tinggi serta ring stand magnetik multifungsi.",
     features: [
@@ -40,7 +40,7 @@ export const PRODUCTS: Product[] = [
     formattedPrice: "Rp 150.000",
     category: "Hobi & Koleksi",
     badge: "Eksklusif",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop",
+    image: "/uploads/stark-banner.png",
     tokopediaUrl: "https://www.tokopedia.com/ginkobiloba",
     description: "Bendera koleksi premium serial Game of Thrones motif House Stark 'Winter Is Coming'. Ukuran standar dinding 90x150cm.",
     features: [
